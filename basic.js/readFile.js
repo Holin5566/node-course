@@ -35,3 +35,5 @@ async function textContent(fileName) {
   }
 }
 textContent("text.txt");
+
+console.log("first log");
