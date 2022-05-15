@@ -12,14 +12,13 @@ function doWork(job, timer) {
 }
 
 // doWork("唱歌", 1000).then((e) => console.log(e));
-
-console.log("早上好，中國");
-console.log("我喜歡冰激林");
 (async () => {
   try {
-    let result = await doWork("唱歌", 1000);
+    let result = await doWork("唱歌", 5000);
     console.log(result);
   } catch (err) {
     console.log(err);
   }
 })();
+console.log("早上好，中國");
+console.log("我喜歡冰激林");
