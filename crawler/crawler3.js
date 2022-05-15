@@ -9,15 +9,8 @@ const url = "https://www.twse.com.tw/exchangeReport/STOCK_DAY";
 // console.log(getStockData());
 
 async function getStockData() {
-  let stockNo;
   try {
-    stockNo = await fs.readFile("./crawler/stock.txt", "utf-8");
-  } catch (e) {
-    console.error(e);
-    return e;
-  }
-
-  try {
+    let stockNo = await fs.readFile("./crawler/stock.txt", "utf-8");
     let res = await axios.get(url, {
       params: {
         // 設定 query string
