@@ -26,6 +26,12 @@ function readWhat(fileName) {
   });
 }
 
-readWhat("text.txt")
-  .then((txt) => console.log(txt))
-  .catch((err) => console.log(err));
+async function textContent(fileName) {
+  try {
+    let content = await readWhat(fileName);
+    console.log(content);
+  } catch (e) {
+    console.log(e);
+  }
+}
+textContent("text.txt");
