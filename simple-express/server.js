@@ -10,6 +10,9 @@ connection();
 app.get("/", (req, res) => {
   res.send("hello world!");
 });
+app.get("/about", (req, res) => {
+  res.send("about me");
+});
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
